@@ -10,8 +10,19 @@ function dropCollections() {
       ()=>console.log('dropped Customer collection'),
       ()=>console.log('no Customer collection')
     );
+     
+  Event.collection.drop()
+  .then(
+    ()=>console.log('dropped Event collection'),
+    ()=>console.log('no Event collection')
+  ); 
 
-
+  Registration.collection.drop()
+  .then(
+    ()=>console.log('dropped Registration collection'),
+    ()=>console.log('no Registration collection')
+  );
+  
   }
 
   function populateCollections() {
