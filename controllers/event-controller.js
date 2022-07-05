@@ -27,7 +27,6 @@ const eventController = {
 
   // POST /api/events/
   postEvent: function(req, res) {
-    console.log(req.body)
     Event.create({ EVENT_CD: req.body.code, EVENT_TITLE: req.body.title, EVENT_DESC: req.body.description}).then(
       (e) => { 
         res.location(`/api/events/${e.EVENT_ID}`)
