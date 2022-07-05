@@ -26,6 +26,7 @@ function dropCollections() {
   }
 
   function populateCollections() {
+    console.log("populating collections")
 
     // This code resets the counter for each collection and creates a few dummy documents
     // Because these methods are asynchronous, the 'then' clauses are changed so they execute
