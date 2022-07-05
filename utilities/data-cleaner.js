@@ -22,9 +22,9 @@ const dataCleaner = {
   cleanEvent: ( event ) => {
     return {
       id: event.EVENT_ID,
-      code: event.EVENT_CD,
-      title: event.EVENT_TITLE,
-      decription: event.EVENT_DESC
+      code: event.EVENT_CODE,
+      title: event.TITLE,
+      decription: event.DESCRIPTION
     }
   },
 
@@ -39,10 +39,10 @@ const dataCleaner = {
   cleanRegistration: ( registration ) => {
     return {
       id: registration.REGISTRATION_ID,
-      title: registration.REGISTRATION_TITLE,
-      registrantName: registration.REGISTRANT_NM,
-      date: registration.REGISTRANT_DT,
-      comment: registration.REGISTRATION_COMMENT
+      event_id: registration.EVENT_ID,
+      customer_id: registration.CUSTOMER_ID,
+      registration_date: registration.REGISTRANT_DATE,
+      notes: registration.NOTES
     }
   },
 
