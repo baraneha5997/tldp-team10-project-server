@@ -1,7 +1,7 @@
 node {
 
   stage('Checkout'){
-    git brach: 'master', url: 'https://github.com/baraneha5997/tldp-team10-project-server.git'
+    git brach: 'main', url: 'https://github.com/baraneha5997/tldp-team10-project-server.git'
    }
    
    stage('Install Dependencies'){
