@@ -2,6 +2,7 @@ import mongoose from 'mongoose'
 import Customer from '../models/customer.js'
 import Event from '../models/event.js'
 import Registration from '../models/registration.js';
+import { env } from 'node:process';
 
 function dropCollections() {
 
@@ -74,7 +75,7 @@ function dropCollections() {
  
   export default function init_db() {
     
-    mongoose.connect('mongodb://127.0.0.1:27017/project')
+    mongoose.connect(`mongodb://${env.DATABASE_SERVICE_HOST}:${env.DATABASE_SERVICE_PORT}/project`)
 
     dropCollections()
     populateCollections() 
